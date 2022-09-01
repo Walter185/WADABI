@@ -144,10 +144,9 @@ button {
   }
 
   #logo {
-    display: flex;
-    width: 3.5vw;
-    margin-top: -5px;
+    width: 95px;
     margin-left: 20px;
+    margin-top: -25px;
   }
   
   @media (min-width: 800px) {
@@ -209,6 +208,15 @@ button {
       padding-right: 0em;
     }
     100% {
-      padding-right: 5em;
+      padding-right: 10em;
     }
+  }
+    
+  /*-------------Footer-------------*/
+  footer {
+    text-align: center;
+
+  }
+  .redsoc {
+    width: 1.5vw;
   }
