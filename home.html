@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/WAADABI7.png">
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script> 
-	<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->    
+  <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
   <title>WADABI</title>
 
 </head>
 
 <body>
   <section class="nav-bar">
-     <div class="brand">
-        <a ><img src="./IMAGENES/WAADABI7.png" ></a>
-      </div>
+    <div class="brand">
+      <a><img src="./IMAGENES/WAADABI7.png"></a>
+    </div>
     <div class="nav-container">
-     
+
       <nav>
         <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
         <ul class="nav-list">
@@ -31,10 +31,10 @@
             <a href="about.html" class="nav-link active">Acerca de</a>
           </li>
           <li>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
-        </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Productos
+            </a>
             <ul class="nav-dropdown">
               <li>
                 <a class="nav-link dropdown-toggle" href="./products.html">Ropa</a>
@@ -47,41 +47,41 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li id="search">
             <form class="form-search content-search navbar-form" action="" method="post">
               <div class="input-group">
-                  <input placeholder="Ingrese producto" class="form-control form-text" type="text" size="15" maxlength="128" />
-                  <span class="input-group-btn">
-                      <button type="submit" class="btn btn-primary">Buscar<span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                  </span>
+                <input placeholder="Ingrese producto" class="form-control form-text" type="text" size="15"
+                  maxlength="128" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary">Buscar<span class="icon glyphicon glyphicon-search"
+                      aria-hidden="true"></span></button>
+                </span>
               </div>
-          </form>
+            </form>
           </li>
           <li>
             <a href="mailto: contacto@wadabi.com" class="nav-link active">Contacto</a>
           </li>
-         
+
         </ul>
       </nav>
     </div>
-    
-  </section>
-   
-  <div class="container">
-    <div class="col div_1_of_3 " style="margin-top:25px;">ROPA</div>
-    <div class="col div_2_of_3 " style="margin-top:25px;">CALZADO</div>
-    <div class="col div_2_of_3 " style="margin-top:25px;">SHOP</div>
-</div>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <footer>
-      <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-      <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-      <p>Derechos reservados @2022</p>
-    </footer>
- <!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  </section>
+
+  <div id="idtabla">
+  </div>
+  <br><br><br>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <footer>
+    <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+    <p>Derechos reservados @2022</p>
+  </footer>
+  <!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -90,7 +90,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"></script>-->
-      <script src="JS/main.js"></script>
+  <script src="JS/main.js"></script>
+  <script src="JS/data.js"></script>
 </body>
 
 </html>

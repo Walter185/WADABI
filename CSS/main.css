@@ -120,6 +120,10 @@ nav ul li ul li a {
  margin-top:-5%;
  width:100%;
 }
+.container {
+  margin: 20px;
+  padding: 20px;
+}
  @media only screen and (min-width: 768px) {
  .position-span-2 {
   margin-left: 2%;
@@ -153,6 +157,9 @@ nav ul li ul li a {
     padding: 70px 0 15px;
   }
   nav ul {
+    display: none;
+  }
+  #search {
     display: none;
   }
   nav ul li {
@@ -238,10 +245,10 @@ article {
   background: whitesmoke;
   display:inline-block;
   transition: all .5s;
-  margin-top: 20px;
+  margin-top: 23px;
 }
 .navbar-form .form-control[type=text]:focus {
-  background-color: #fff;
+  background-color: #b9b9b9;
   border-color: #729fcf;
   color:#333;
   -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
