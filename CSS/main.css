@@ -57,6 +57,7 @@
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
+  justify-content: right !important;
 }
  
 nav {
@@ -113,6 +114,34 @@ nav ul li ul li a {
   height: 70px;
   width: 70px;
 }
+/*------------------- DIVS ----------------------------*/
+
+.button-margin {
+ margin-top:-5%;
+ width:100%;
+}
+ @media only screen and (min-width: 768px) {
+ .position-span-2 {
+  margin-left: 2%;
+  padding-left: 5%;
+ }
+}
+ @media only screen and (min-width: 480px) {
+  .div_1_of_3 {
+  width: 52%;	
+ }
+  .div_2_of_3 {
+  width: 22%;
+ }
+      .col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+ }
+  .col:first-child {
+  margin-left: 0;
+ }
+}
  
 @media only screen and (max-width: 798px) {
   .nav-mobile {
@@ -132,7 +161,7 @@ nav ul li ul li a {
   nav ul li a {
     padding: 15px;
     line-height: 20px;
-	padding-left: 25%;
+	padding-left: 20%;
 	 
   }
   nav ul li ul li a {
@@ -152,10 +181,17 @@ nav ul li ul li a {
     display: block !important;
   }
 }
+@media (min-width:1200px) {
+  .navbar-form input.form-control[type=text] { width: 160px; }
+  .navbar-form input.form-control[type=text]:focus { width: 350px; }
+}
+
+
+
 #nav-toggle {
   position: absolute;
   left: 18px;
-  top: 22px;
+  top: 32px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
@@ -195,4 +231,20 @@ article {
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px;
+}
+
+/*------- buscador           */
+.navbar-form .form-control[type=text] {
+  background: whitesmoke;
+  display:inline-block;
+  transition: all .5s;
+  margin-top: 20px;
+}
+.navbar-form .form-control[type=text]:focus {
+  background-color: #fff;
+  border-color: #729fcf;
+  color:#333;
+  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
