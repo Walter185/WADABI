@@ -20,7 +20,9 @@ a{
  text-decoration: none;
  color: black;
 }
-
+.card {
+    display: inline-block;
+}
 
 @media(max-width:320px) {
     .title1 {

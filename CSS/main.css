@@ -2,7 +2,6 @@ header {
   box-shadow: 0px 2px 20px -10px black;
   z-index: -1;
 }
-
 .preNav {
   /* Center and scale the image nicely */
   background-position: center;
@@ -40,7 +39,7 @@ header {
 
 .responsiveContainer {
   display: flex;
-  flex-Direction: column;
+  flex-Direction: row;
 }
 
 .logo {
@@ -49,7 +48,15 @@ header {
   text-decoration: none;
   letter-spacing: .3em;
 }
-
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: inline-block;
+  flex-wrap:wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
 .burger {
   display: none;
   position: absolute;
@@ -145,10 +152,48 @@ li.link:first-child {
   top: .4rem;
   left: 2.7rem;
 }
+/*--------------- cards---------*/
+
+#hr {
+  margin: 0;
+  border-top: 3px solid transparent;
+}
+
+
+/* Product section styling */
+
+.products {
+  padding: 20px;
+  margin: 20px;
+  background-color: #cdbe78;
+  padding-bottom: 80px;
+}
+
+.buttons button {
+  margin: 5px;
+}
+
+.item {
+  color: black;
+  background: #F5F7F7;
+  width: 31%;
+  margin: 1.1%;
+  display: inline-block;
+  flex-direction: row;
+  align-items: baseline;
+  border: 1px solid #c9cccc;
+  padding: 2rem;
+  transition-property: padding;
+  transition-duration: 1000ms;
+}
+
+.productsHeader {
+  margin-bottom: 30px;  
+}
 
 @media(max-width:767px) {
   .navBar {
-      flex-direction: column;
+      flex-direction: row;
   }
 
   .logo {
@@ -157,7 +202,7 @@ li.link:first-child {
 
   .links {
       display: flex;
-      flex-Direction: column;
+      flex-Direction: row;
       justify-content: center;
       padding: 1rem 2.5rem;
   }
