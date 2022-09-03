@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/WAADABI7.png">
-  <link rel="stylesheet" href="css/main.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="./css/style.css" rel="stylesheet" />
+  <link href="./css/reusables.css" rel="stylesheet" />
+  <link href="./css/header.css" rel="stylesheet" />
+  <link href="./css/grid.css" rel="stylesheet" />
+  <link href="./css/heros-section.css" rel="stylesheet" />
+  <link href="./css/tip-section.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
   <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,65 +21,45 @@
 </head>
 
 <body>
-  <section class="nav-bar">
-    <div class="brand">
-      <a><img src="./IMAGENES/WAADABI7.png"></a>
+  <header>
+    <div class="preNav">
+        <h1 class="logoHolder">WADABI STORE</h1>
     </div>
-    <div class="nav-container">
-
-      <nav>
-        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-        <ul class="nav-list">
-          <li>
-            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html" class="nav-link active">Acerca de</a>
-          </li>
-          <li>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Productos
-            </a>
-            <ul class="nav-dropdown">
-              <li>
-                <a class="nav-link dropdown-toggle" href="./products.html">Ropa</a>
-              </li>
-              <li>
-                <a class="nav-link dropdown-toggle" href="./products.html">Calzado</a>
-              </li>
-              <li>
-                <a class="nav-link dropdown-toggle" href="./products.html">Kids</a>
-              </li>
-            </ul>
-          </li>
-          <li id="search">
-            <form class="form-search content-search navbar-form" action="" method="post">
-              <div class="input-group">
-                <input placeholder="Ingrese producto" class="form-control form-text" type="text" size="15"
-                  maxlength="128" />
-                <span class="input-group-btn">
-                  <button type="submit" class="btn btn-primary">Buscar<span class="icon glyphicon glyphicon-search"
-                      aria-hidden="true"></span></button>
-                </span>
-              </div>
-            </form>
-          </li>
-          <li>
-            <a href="mailto: contacto@wadabi.com" class="nav-link active">Contacto</a>
-          </li>
-
+    <nav class="navBar">
+        <div onclick="burgerClicked(this)" class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logoContainer">
+            <a href="#" class='logo'>WADABI</a>
+        </div>
+        <ul id="links" class="links hide">
+            <li class="link active">Home <i class="fa fa-home" aria-hidden="true"></i></li>
+            <li class="link" onmouseenter="mouseInLinks(this)" onmouseleave="mouseOutLinks(this)">
+                <span>Categories <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <ul id="categories">
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Kids</li>
+                </ul>
+            </li>
+            <li class="link">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li class="link">Mi cuenta <i class="fa fa-user" aria-hidden="true"></i></li>
+            <li class="link">Acerca de</li>
         </ul>
-      </nav>
-    </div>
-
+    </nav>
+</header>
+<div class="grid-container">
+  <section id="heroSection" class="heros-section" >
+      <div class="hero-container1 overlay-container active"><img src="./IMAGENES/foto2.jpg  " class="img-hero img1"/><div class="my-overlay o1"><h3></h3><button class="discover-button">Discover</button></div></div>
+      <div class="hero-container2 overlay-container"><img src="./IMAGENES/foto2.jpg" class="img-hero img2"/><div class="my-overlay o2"><h3></h3><button class="discover-button">Discover</button></div></div>
+      <div class="hero-container3 overlay-container"><img src="./IMAGENES/foto2.jpg" class="img-hero img3"/><div class="my-overlay x o3"><h3></h3><button class="discover-button">Discover</button></div></div>
+      <div class="hero-container4 overlay-container"><img src="./IMAGENES/foto2.jpg" class="img-hero img4"/><div class="my-overlay x o4"><h3></h3><button class="discover-button">Discover</button></div></div>
+      <div  id="img16-4p5-container" class="hero-container5 overlay-container"><img src="" class="img-hero img5"/><div class="my-overlay-fixed o5"><h1></h1></div></div>
   </section>
 
-  <div id="idtabla">
-  </div>
-  <br><br><br>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</div>
   <footer>
     <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
     <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -90,8 +76,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"></script>-->
-  <script src="JS/main.js"></script>
   <script src="JS/data.js"></script>
+  <script src="JS/main.js"></script>
+  <script src="JS/slick-slider-custom.js" type="text/javascript" charset="utf-8"></script>
+  <script src="JS/heros-section.js"></script>
 </body>
 
 </html>

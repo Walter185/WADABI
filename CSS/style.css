@@ -1,0 +1,49 @@
+body {
+    background: #F5F7F7;
+    margin: 0px;
+    font-family: Raleway, arial;
+    --main-color: #E19F67; //#1A73E8
+}
+
+.title1 {
+    letter-spacing: .1em;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+wiw:hover {
+    text-decoration: underline;
+    cursor: default;
+}
+
+
+
+@media(max-width:320px) {
+    .title1 {
+        font-size: 21px;
+    }
+}
+
+@media(max-width:360px) {
+    .title1 {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:400px) {
+    .title1 {
+        font-size: 23px;
+    }
+}
+
+@media(max-width:440px) {
+    .title1 {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:480px) {
+    .title1 {
+        font-size: 25px;
+    }
+}

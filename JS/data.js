@@ -1,12 +1,13 @@
+
 var data=[
-    {codigo:"cod1",
-     imagen:"imagenes/vestido.jpg",
+    {
+     imagen:'imagenes/wadabi.png',
      nombre:"Vestido",
      descripcion:"Vestido de seda",
     },
-    {codigo:"cod2",
-     imagen:"imagenes/vestido.jpg",
-     nombre:"Vestido",
-     descripcion:"Vestido de seda",
+    {
+     imagen:"imagenes/wadabi.png",
+     nombre:"pantalon",
+     descripcion:"pantalon de seda",
     }
 ]
