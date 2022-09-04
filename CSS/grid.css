@@ -1,8 +1,0 @@
-.grid-container {
-    max-width: 2700px;
-    margin: 0 auto;
-}
-
-@media(max-width: 767px) {
-    .grid-container {}
-}
