@@ -1,3 +1,123 @@
+window.onload= function(){
+
+
+	class Producto{
+
+		constructor(name, basicPrice,id,description){
+			this.name = name;
+			this.image = 'imagenes/' + this.name+'.jpg';
+			this.basicPrice = basicPrice;
+			this.qty = 0;
+			this.id = "00"+id;
+			this.description = description;
+			this.partialViewDescription = '';
+			this.partialViewCatalogue = '';
+			this.partialViewFacture = '';
+			this.facture = '';
+		}
+	}
+	//  VARIABLES GLOBALES
+	if (localStorage.getItem('listaProducto') == null) {
+		var tablaProducto =
+		[
+		new Producto('Vestido',150.50,61,"Vestido"),
+		new Producto('Pantalon',260.50,62,"Pantalon"),
+		new Producto('Blusa',170.50,63,"Blusa"),
+		new Producto('Zapato',580.50,64,"Zapato"),
+		new Producto('Remera',390.50,65,"Remera"),
+		new Producto('Buzo',1100.50,66,"Buzo"),
+		new Producto('Campera',1110.50,67,"Campera"),
+		new Producto('Zapatilla',1120.50,68,"Zapatilla"),
+		new Producto('Camisa',1130.50,69,"Camisa")
+		];
+	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
+
+	// 
+		for (var i = 0; i < tablaProducto.length; i++) {
+			tablaProducto[i].partialViewCatalogue = `<div id="tarjeta">
+						<div class="card">
+						  <img class="card-img-top" src="${tablaProducto[i].image}" alt="Card image cap" width="250px">
+						   <div class="overlay">
+   							 <div class="text">${tablaProducto[i].description}</div>
+ 						   </div>
+						  <div class="card-body">
+							  <h5 class="card-title">${tablaProducto[i].name}</h5>
+							    <p class="mb-0">id#: ${tablaProducto[i].id}</p> 
+							    <p class="mt-0">prix: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
+							  <span class="span">Cantidad:</span> 
+							  <input class="inputNumber" type="number" value="0">
+							 <button id="premier" class="btn btn-primary">Carrito</button>
+						  </div>
+						</div>
+					</div>`
+					$('#myCatalogue').append(tablaProducto[i].partialViewCatalogue);
+		}
+
+	var quantite = 0;
+
+	$('.btn-primary').each(function(){
+		$(this).click(function(){
+			console.log($(this).parent().children('.card-title').text());
+			console.log($(this).parent().children('.inputNumber').val());
+
+			if ($(this).parent().children('.inputNumber').val() > 0) {
+				quantite = $(this).parent().children('.inputNumber').val();
+				updateQuantite($(this));
+			}
+
+		
+		});
+	});
+
+
+	function updateQuantite(button){
+		for (var i = 0; i < tablaProducto.length; i++) {
+			if(tablaProducto[i].name ==  button.parent().children('.card-title').text()){
+				tablaProducto[i].qty += parseInt(quantite);
+
+				console.log('El monto total es: ' + tablaProducto[i].qty * tablaProducto[i].basicPrice);
+				console.log('El valor por producto es: ' + tablaProducto[i].basicPrice);
+				console.log('La cantidad total de productos son: ' + tablaProducto[i].qty);
+			}
+		}
+			quantite = 0;
+			button.parent().children('.inputNumber').val('0');
+			copiaListaProducto();
+	}
+
+	//
+	$('.inputNumber').each(function(){
+		$(this).keyup(function(){
+
+		 	if (!(isNaN(parseInt($(this).val())))) {						
+
+			 	if (parseInt($(this).val()) < 0) {$(this).val('0')}
+		 	}
+		 })
+	});
+
+	$('.inputNumber').each(function(){
+		$(this).change(function(){
+
+		 	if (!(isNaN(parseInt($(this).val())))) {						
+
+			 	if (parseInt($(this).val()) < 0) {$(this).val('0')}
+		 	}
+		 })
+	});
+
+	function copiaListaProducto(listaProducto){
+		if (typeof(Storage) !== 'undefined'){
+			localStorage.clear();
+			localStorage.setItem('listaProducto',JSON.stringify(tablaProducto));
+			
+		}
+		else {
+			console.log('Lamentablementem su navegador no soporta esta pagina...');
+		}
+	}
+}
+
 var links = document.getElementById("links");
 var categoriesList = document.getElementById("categories");
 
