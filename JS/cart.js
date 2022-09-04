@@ -6,8 +6,8 @@ function crearDescriptionProduct(){
 		tabla[i].partialViewDescription = `<tr>
 							<td class="premier" data-th="Product">
 								<div class="row">
-									<div class="col-sm-2 hidden-xs">
-										<img src="${tabla[i].image}" alt="..." class="img-fluid"/>
+									<div>
+										<img src="${tabla[i].image}" alt="..." width="70px"/>
 									</div>
 									<div class="col-sm-10 avantNom">
 										<h4 class="nomargin leNom">${tabla[i].name}</h4>
@@ -28,11 +28,11 @@ function crearDescriptionProduct(){
 			total += tabla[i].qty * tabla[i].basicPrice.toFixed(2);
 		}
 	}
-	$('#myTotal').text('Total: '+ total.toFixed(2) + '$');
+	$('#monTotal').text('Total: '+ total.toFixed(2) + '$');
 	if(total > 0){
-		$('.payer').attr("disabled",false);
+		$('.pagar').attr("disabled",false);
 	}else {
-		$('.payer').attr("disabled",true);
+		$('.pagar').attr("disabled",true);
 	}
 	EventListeners();
 }

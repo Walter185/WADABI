@@ -21,11 +21,7 @@ html{
 section{
 	height: 100%;
 }
-.imageProduit{
-	height: 100px;
-	position: relative;
-	left: 25%;
-}
+
 footer{
 	border-top: 1px solid white;
 	color: white;

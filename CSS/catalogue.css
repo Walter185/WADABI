@@ -11,8 +11,8 @@
 }
 #mycatalogue{
 	width: 200px;
-
 }
+
 .navbar-nav li{
 	padding-right: 40px;
 }
@@ -23,6 +23,9 @@
 header{
 	border-bottom: 1px solid grey;
 	height: 700px;
+}
+.card img {
+	width: 70px;
 }
 .card-img-top{
 	height: 200px;
