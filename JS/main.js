@@ -113,7 +113,7 @@ window.onload= function(){
 			
 		}
 		else {
-			console.log('Lamentablementem su navegador no soporta esta pagina...');
+			console.log('Lamentablemente su navegador no soporta esta pagina...');
 		}
 	}
 }

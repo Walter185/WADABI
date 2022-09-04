@@ -1,0 +1,68 @@
+.navbar{
+	background-color: #E9ECEF;
+	color: black;
+}
+.navbar-nav li{
+	padding-right: 40px;
+}
+.inputPersonel{
+	/*position: relative;
+	left: 10%;*/
+	margin:0px auto;
+	width: 20%;
+}
+body{
+	background-color:#A27945; 
+	max-height: 100%;
+}
+html{
+	max-height: 100%;
+}
+section{
+	height: 100%;
+}
+.imageProduit{
+	height: 100px;
+	position: relative;
+	left: 25%;
+}
+footer{
+	border-top: 1px solid white;
+	color: white;
+	padding-top: 30px;
+	margin:0px auto;
+	text-align: center;
+}
+
+footer h2{
+	font-size: 25px;
+}
+footer p{
+	font-size: 13px;
+}
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 800px) {
+    table#cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	
+	table#cart thead { display: none; }
+	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table#cart tbody tr td:first-child { background: #333; color: #fff; }
+	table#cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+	section{
+		height: 100%;
+	}
+	
+	
+	table#cart tfoot td{display:block; }
+	table#cart tfoot td .btn{display:block;}
+	
+}

@@ -45,7 +45,30 @@
         </ul>
       </nav>
 
-
+      <section class="container">
+        <table id="cart" class="table table-hover table-condensed mt-5">
+            <thead>
+                <tr>
+                    <th style="width:50%">Product</th>
+                    <th style="width:10%">Price</th>
+                    <th style="width:8%">Quantity</th>
+                    <th style="width:22%" class="text-center">Subtotal</th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+            <tbody id="myCart">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><a href="catalogue.html" class="btn btn-warning">Continuar comprando</a></td>
+                    <td colspan="1" class="hidden-xs"></td>
+                    <td colspan="2" class="hidden-xs text-center"><strong id="monTotal">Total: 0.00$</strong></td>
+                    <td><a href="checkout.html"><button class="btn btn-success payer">Pagar</button></a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 
     <footer>
         <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -63,15 +86,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
           integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
           crossorigin="anonymous"></script>-->
-      <script src="JS/data.js"></script>
+    
       <script src="JS/main.js"></script>
       
       <script src="JS/slick-slider-custom.js" type="text/javascript" charset="utf-8"></script>
       <script src="JS/heros-section.js"></script>
-      
-      <script src="./scripts/main.js"></script>
-      <script src="./scripts/products-items.js"></script>
-      <script src="./scripts/products-sidemenu.js"></script>
+      <script src="JS/cart.js"></script>
     </body>
     
     </html>
