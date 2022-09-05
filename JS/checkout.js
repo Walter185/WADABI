@@ -70,11 +70,11 @@ function crearFinDeLista(subTotal,tax){
 		
 		/*On se rappelle que le premier élément d'un tableau
 		 *possède l'indice 0*/
-		var mois = ['janvier', 'février', 'mars', 'avril', 'mai','juin', 'juillet', 'août', 'septembre','octobre', 'novembre', 'décembre'];
+		var mois = ['enero', 'febrero', 'marzo', 'abril', 'mayo','junio', 'julio', 'agosto', 'septiembre','octubre', 'noviembre', 'diciembre'];
 		
-		var jour = ['dimanche', 'lundi', 'mardi', 'mercredi','jeudi', 'vendredi', 'samedi'];
+		var jour = ['Domingo', 'Lunes', 'Martes', 'Miércoles','Jueves', 'Viernes', 'Sábado'];
 	
-		 $('#maDate').text("Date: "+jour[dday]+ " le "+ddate+" " + mois[dmo] + " " +dy);
+		 $('#maDate').text("Fecha: " +jour[dday]+ " , "+ddate+ " de " + mois[dmo] + " " +dy);
 		 console.log(ddate)
 	}
 	

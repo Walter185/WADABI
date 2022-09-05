@@ -1,3 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/WAADABI7.png">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="./css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
+  <title>WADABI</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="preNav">
+        <h1 class="logoHolder">WADABI STORE</h1>
+    </div>
+    <nav class="navBar">
+      <div onclick="burgerClicked(this)" class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="logoContainer">
+        <a class='logo'>WADABI</a>
+      </div>
+      <ul id="links" class="links hide">
+        <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
+        <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>       
+        <li class="link"><a href="sucursales.html">Sucursales <i class="fa fa-university" aria-hidden="true"></i></li></a>  
+        <li class="link"><a href="about.html">Sobre WADABI®</li></a>
+        <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>   
+        
+      </ul>
+    </nav>
+</header> 
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
@@ -12,7 +53,7 @@
               <span class="text-muted"> FACTURA ELECTRONICA</span>
             </h4>
               <span class="text-muted" id="maDate">FECHA: </span>
-            <ul class="list-group mb-3" id="maListe">
+            <ul class="list-group mb-3" id="myList">
            
             </ul>
       </div>
@@ -22,3 +63,16 @@
          <a href="index.html" id="boutonClear" class=" text-center btn" style="background-color: #007BFF;color: white;">Regresar a la Pagina</a>	
   </div>
 </div>
+
+
+</div>
+<footer>
+  <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+  <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+  <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+  <p>Derechos reservados @2022</p>
+</footer>
+<script src="JS/checkout.js"></script>
+
+</html>
