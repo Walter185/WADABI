@@ -1,8 +1,7 @@
 window.onload= function(){
 
-
+			
 	class Producto{
-
 		constructor(name, basicPrice,id,description){
 			this.name = name;
 			this.image = 'imagenes/' + this.name+'.jpg';
@@ -12,17 +11,18 @@ window.onload= function(){
 			this.description = description;
 			this.partialViewDescription = '';
 			this.partialViewCatalogue = '';
-			this.partialViewFacture = '';
-			this.facture = '';
+			this.partialViewBill = '';
+			this.bill = '';
 		}
 	}
-	//  VARIABLES GLOBALES
-	if (localStorage.getItem('listaProducto') == null) {
+	//  PRODUCTOS  
+	if (localStorage.getItem('listaProducto') == null)
+	 {
 		var tablaProducto =
 		[
-		new Producto('Vestido',150.50,61,"Vestido"),
+		new Producto('foto2',150.50,61,"Vestido"),
 		new Producto('Pantalon',260.50,62,"Pantalon"),
-		new Producto('Blusa',170.50,63,"Blusa"),
+		new Producto('foto3',170.50,63,"Blusa"),
 		new Producto('Zapato',580.50,64,"Zapato"),
 		new Producto('Remera',390.50,65,"Remera"),
 		new Producto('Buzo',1100.50,66,"Buzo"),
@@ -32,7 +32,7 @@ window.onload= function(){
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
 
-	// 
+	// FICHA DE PRODUCTO
 		for (var i = 0; i < tablaProducto.length; i++) {
 			tablaProducto[i].partialViewCatalogue = `<div id="tarjeta">
 						<div class="card">
@@ -68,8 +68,7 @@ window.onload= function(){
 		
 		});
 	});
-
-
+      
 	function updateQuantite(button){
 		for (var i = 0; i < tablaProducto.length; i++) {
 			if(tablaProducto[i].name ==  button.parent().children('.card-title').text()){
@@ -247,72 +246,5 @@ function burgerClicked(event) {
 
 function mouseInLinks(event) {
     categories.classList.add('active');
-}
-
-
-
-var dispProducts = [...products];
-// 1- function that shows all products
-function filterAll() {
-  document.getElementById("displayCard").innerHTML = "";
-  dispProducts = [...products];
-  displayProducts();
-}
-// 2- function that shows only mobile products
-function filterHom() {
-  document.getElementById("displayCard").innerHTML = "";
-  dispProducts = products.filter((item) => item.category === "hombre");
-  displayProducts();
-}
-// 3- function that shows only camera products
-function filterMuj() {
-  document.getElementById("displayCard").innerHTML = "";
-  dispProducts = products.filter((item) => item.category === "mujer");
-  displayProducts();
-}
-// 4- function that shows only laptop products
-function filterKids() {
-  document.getElementById("displayCard").innerHTML = "";
-  dispProducts = products.filter((item) => item.category === "kids");
-  displayProducts();
-}
-
-//create a function to display products.
-function displayProducts() {
-  var cardsContainers = document.getElementById("displayCard");
-  for (var i = 0; i < dispProducts.length; i++) {
-    var src = dispProducts[i].imgSrc;
-    var title = dispProducts[i].name;
-    var price = dispProducts[i].price;
-    //main card div
-    var card = document.createElement("div");
-    card.setAttribute("class", "card item");
-    card.setAttribute("style", "width: 15rem");
-    //two elements inside main card element
-    var img = document.createElement("img");
-    img.setAttribute("src", src);
-    img.setAttribute("class", "card-img-top");
-    var cardBody = document.createElement("div");
-    cardBody.setAttribute("class", "card-body");
-    //card body has three elements
-    var cardTitle = document.createElement("h5");
-    cardTitle.setAttribute("class", "card-title");
-    cardTitle.innerText = title;
-    var cardDesc = document.createElement("p");
-    cardDesc.setAttribute("class", "card-text");
-    cardDesc.innerText = price;
-    var cardBtn = document.createElement("a");
-    cardBtn.setAttribute("class", "btn btn-primary");
-    cardBtn.setAttribute("onclick", "addToCart()");
-    cardBtn.innerText = "Add to the cart";
-    //inserting elements in card div
-    cardBody.append(cardTitle, cardDesc, cardBtn);
-    card.append(img, cardBody);
-    cardsContainers.appendChild(card);
-  }
-  var cardArray = document.getElementsByClassName("card");
-  for (var i = 0; i < cardArray.length; i++) {
-    cardArray[i].style.backgroundColor = "#f2f2f2";
-  }
 }
 

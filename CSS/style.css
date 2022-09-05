@@ -647,7 +647,7 @@ li.link:first-child {
   
     .links {
         display: flex;
-        flex-Direction: row;
+        flex-Direction: column;
         justify-content: center;
         padding: 1rem 2.5rem;
     }

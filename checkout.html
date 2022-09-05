@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/WAADABI7.png">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <link href="./css/style.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
@@ -30,11 +31,41 @@
         <a class='logo'>WADABI</a>
       </div>
       <ul id="links" class="links hide">
-        <li class="link"><a href="home.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
-        <li class="link"><a href="products.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>       
+        <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
+        <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>       
         <li class="link"><a href="sucursales.html">Sucursales <i class="fa fa-university" aria-hidden="true"></i></li></a>  
         <li class="link"><a href="about.html">Sobre WADABI®</li></a>
         <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>   
         
       </ul>
+    
     </nav>
+  </header>
+  <div class="container mt-5 w-50">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mb-4">
+      <hr>
+          <h1 class="text-center text-muted">Detalle de su Orden</h1>
+      <hr class="mb-5">
+          <ul class="list-group mb-3" id="myList">
+          
+          </ul>
+      </div>
+</div>
+
+    <div class="row">
+    <a href="ticket.html" id="boutonPanier" class=" text-center btn" style="background-color: #007BFF;color: white;">Confirmar</a>	
+    </div>
+</div>
+<script src="JS/checkout.js"></script>
+</body>
+    <footer>
+      <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+      <p>Derechos reservados @2022</p>
+    </footer>
+
+  
+  </html>
