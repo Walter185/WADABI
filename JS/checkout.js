@@ -32,7 +32,7 @@ function crearFinDeLista(subTotal,tax){
 							  <span class="text-muted">$${(tabla[i].basicPrice * tabla[i].qty).toFixed(2)}</span>
 							</li>`
 	
-			$('#yList').append(tabla[i].partialViewBill);
+			$('#myList').append(tabla[i].partialViewBill);
 			total += tabla[i].qty * tabla[i].basicPrice.toFixed(2);
 			}
 		}

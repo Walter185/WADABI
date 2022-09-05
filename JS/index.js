@@ -23,12 +23,9 @@ window.onload= function(){
 		new Producto('foto2',150.50,61,"Vestido"),
 		new Producto('Pantalon',260.50,62,"Pantalon"),
 		new Producto('foto3',170.50,63,"Blusa"),
-		new Producto('Zapato',580.50,64,"Zapato"),
-		new Producto('Remera',390.50,65,"Remera"),
-		new Producto('Buzo',1100.50,66,"Buzo"),
-		new Producto('Campera',1110.50,67,"Campera"),
-		new Producto('Zapatilla',1120.50,68,"Zapatilla"),
-		new Producto('Camisa',1130.50,69,"Camisa")
+		new Producto('pantalon',580.50,64,"Zapato"),
+		new Producto('wadabi',390.50,65,"Remera"),
+		new Producto('wadabi3',1100.50,66,"Buzo"),
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
 
