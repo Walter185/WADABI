@@ -233,7 +233,7 @@ function mouseInHero() {
         activate(4);
     }
 }
-herosInit();
+
 var links = document.getElementById("links");
 var categoriesList = document.getElementById("categories");
 
@@ -245,3 +245,6 @@ function mouseInLinks(event) {
     categories.classList.add('active');
 }
 
+function mouseOutLinks(event) {
+    categories.classList.remove('active')
+}
