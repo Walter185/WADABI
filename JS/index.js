@@ -1,3 +1,15 @@
+$(document).ready(function()
+{
+$('#containerSlider').slick({
+	dots: true,
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	});
+});
+
 var links = document.getElementById("links");
 var categoriesList = document.getElementById("categories");
 
@@ -131,12 +143,12 @@ var heros = document.getElementsByClassName('overlay-container');
 var overlays = document.getElementsByClassName('my-overlay');
 var bigImgContainer = document.getElementById('img16-4p5-container');
 var heroSectionRoot = document.getElementById("heroSection"); 
-var bigImg = bigImgContainer.childNodes[0];
+/*var bigImg = bigImgContainer.childNodes[0];
 var bigHeroTextHolder = bigImgContainer.childNodes[1].childNodes[0];
 var titleHeroTextHolder1 = overlays[0].childNodes[0];
 var titleHeroTextHolder2 = overlays[1].childNodes[0];
 var titleHeroTextHolder3 = overlays[2].childNodes[0];
-var titleHeroTextHolder4 = overlays[3].childNodes[0];
+var titleHeroTextHolder4 = overlays[3].childNodes[0];*/
 var img1 = "./imagenes/foto2.jpg";
 var img2 = "./imagenes/foto2.jpg";
 var img3 = "./imagenes/foto2.jpg";

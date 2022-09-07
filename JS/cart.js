@@ -21,7 +21,7 @@ function crearDescriptionProduct(){
 								<p class="text-center mt-3">${tabla[i].qty}</p>
 							</td>
 							<td data-th="Subtotal" class="text-center">${(tabla[i].qty * tabla[i].basicPrice).toFixed(2)}</td>
-							<td><button class="btn bg-danger text-white w-100 mesRetrait">Quitar</button></td>
+							<td><button class="btn bg-danger text-white w-100 mesRetrait" id="quitar">Quitar</button></td>
 						</tr>`
 		if (tabla[i].qty > 0) {
 			//console.log('El nombre: ' + tabla[i].name + '\nla cantidad: ' + tabla[i].qty + '\nle precio de base: ' + tabla[i].basicPrice + '\nle precio: ' + tabla[i].qty * tabla[i].basicPrice);
