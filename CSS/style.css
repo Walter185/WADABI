@@ -663,4 +663,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  font-size:large;
+}
+
+body{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+#hero2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0)
+  )
+  ,url("../IMAGENES/Sneakers.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-size:large;
+}
+
+footer .container{
+  background-color:#F5F7F7;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.redsoc{
+  margin:1em;
+}
+
+.redsoc:hover{
+  color:brown;
 }
