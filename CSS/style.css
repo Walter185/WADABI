@@ -664,3 +664,21 @@ a {
   background-size: cover;
   background-position: center center;
 }
+
+h2{
+  margin: 16px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.barrios{
+  text-align: center;
+  align-items: center;
+}
+
+.barrios p{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
