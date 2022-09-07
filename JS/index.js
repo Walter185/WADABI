@@ -34,12 +34,11 @@ window.onload= function(){
 	 {
 		var tablaProducto =
 		[
-		new Producto('foto2',150.50,61,"Vestido"),
-		new Producto('Pantalon',260.50,62,"Pantalon"),
-		new Producto('foto3',170.50,63,"Blusa"),
-		new Producto('pantalon',580.50,64,"Zapato"),
-		new Producto('wadabi',390.50,65,"Remera"),
-		new Producto('wadabi3',1100.50,66,"Buzo"),
+		new Producto('zapa1',150.50,61,"Zapa1"),
+		new Producto('zapas2',260.50,62,"Zapa2"),
+		new Producto('zapas3',170.50,63,"Zapa3"),
+		new Producto('zapas4',580.50,64,"Zapa4"),
+		new Producto('zapas5',390.50,65,"Zapa5"),
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
 
@@ -152,54 +151,6 @@ var title3 = "Consumables";
 var title4 = "Services";
 
 
-function herosInit() {
-    bigImg.src = img1;
-    bigHeroTextHolder.textContent = text1;
-    titleHeroTextHolder1.textContent = title1;
-    titleHeroTextHolder2.textContent = title2;
-    titleHeroTextHolder3.textContent = title3;
-    titleHeroTextHolder4.textContent = title4;
-    heroSectionRoot.addEventListener('mouseenter', mouseEnterHeros);
-    heroSectionRoot.addEventListener('mouseleave', mouseLeaveHeros);
-    for (let h of heros){
-        h.addEventListener('mouseenter', mouseInHero)
-    }
-}
-
-function automateSelection() {
-    if (heros[0].classList.contains('active')) {
-        bigImg.src = img2;
-        bigHeroTextHolder.textContent = text2;
-        activate(2);
-    } else if (heros[1].classList.contains('active')) {
-        bigImg.src = img3;
-        bigHeroTextHolder.textContent = text3;
-        activate(3);
-    } else if (heros[2].classList.contains('active')) {
-        bigImg.src = img4;
-        bigHeroTextHolder.textContent = text4;
-        activate(4);
-    } else if (heros[3].classList.contains('active')) {
-        bigImg.src = img1;
-        bigHeroTextHolder.textContent = text1;
-        activate(1);
-    } else {
-        bigImg.src = img1;
-        bigHeroTextHolder.textContent = text1;
-        activate(1);
-    }
-}
-
-var myInterval = setInterval(automateSelection, 5000);
-
-function mouseLeaveHeros() {
-    myInterval = setInterval(automateSelection, 5000);
-}
-
-function mouseEnterHeros() {
-    clearInterval(myInterval);
-}
-
 function activate(index) {
     if (index === 1) {
         heros[0].classList.add('active');
@@ -247,5 +198,4 @@ function mouseInHero() {
         activate(4);
     }
 }
-herosInit();
 
