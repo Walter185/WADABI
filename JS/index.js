@@ -1,3 +1,17 @@
+var links = document.getElementById("links");
+var categoriesList = document.getElementById("categories");
+
+function burgerClicked(event) {
+    links.classList.toggle("hide");
+}
+
+function mouseInLinks(event) {
+    categories.classList.add('active');
+}
+
+function mouseOutLinks(event) {
+    categories.classList.remove('active')
+}
 window.onload= function(){
 
 			
@@ -233,18 +247,5 @@ function mouseInHero() {
         activate(4);
     }
 }
+herosInit();
 
-var links = document.getElementById("links");
-var categoriesList = document.getElementById("categories");
-
-function burgerClicked(event) {
-    links.classList.toggle("hide");
-}
-
-function mouseInLinks(event) {
-    categories.classList.add('active');
-}
-
-function mouseOutLinks(event) {
-    categories.classList.remove('active')
-}
