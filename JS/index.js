@@ -57,7 +57,7 @@ window.onload= function(){
 	// FICHA DE PRODUCTO
 		for (var i = 0; i < tablaProducto.length; i++) {
 			tablaProducto[i].partialViewCatalogue = `<div id="tarjeta">
-						<div class="card">
+						<div>
 						  <img class="card-img-top" src="${tablaProducto[i].image}" alt="Card image cap" width="250px">
 						   <div class="overlay">
    							 <div class="text">${tablaProducto[i].description}</div>
@@ -65,9 +65,9 @@ window.onload= function(){
 						  <div class="card-body">
 							  <h5 class="card-title">${tablaProducto[i].name}</h5>
 							    <p class="mb-0">id#: ${tablaProducto[i].id}</p> 
-							    <p class="mt-0">prix: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
+							    <p class="mt-0">Precio: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
 							  <span class="span">Cantidad:</span> 
-							  <input class="inputNumber" type="number" value="0">
+							  <input class="inputNumber" type="number" value="0" id="innum">
 							 <button id="premier" class="btn btn-primary">Carrito</button>
 						  </div>
 						</div>
