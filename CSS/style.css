@@ -98,6 +98,7 @@
 h2{
   margin-left: 20px;
 }
+
 @media(max-width:1024px) {
 
   .heros-section {
@@ -202,28 +203,25 @@ h1 {
   border-radius: .25rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-#iralcarrito , #pagar, #continuar{
-  background-color: #11fd0d;
-  border-color: #000; display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  margin: 50px;
-  padding: 50px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
 
-#iralcarrito , #pagar, #continuar{
+#btnConfirmar {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  margin-inline: 50%;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  
+}
+#iralcarrito , #pagar, #btnContinuar {
   background-color: #11fd0d;
   border-color: #000; display: inline-block;
   font-weight: 400;
@@ -243,7 +241,8 @@ h1 {
   border-radius: .25rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-#quitar {
+  
+#quitar{
   background-color: #fd2d0d;
   border-color: #000; display: inline-block;
   font-weight: 400;
@@ -264,6 +263,27 @@ h1 {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+#btnContinuar , #btnClear{
+  background-color: #0d6efd;
+  border-color: #000000; 
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 50px;
+  padding: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 .logoHolder {
   border-bottom: 1px solid #666674;
   border-top: 1px solid #666674;
@@ -271,6 +291,9 @@ h1 {
   padding: .8rem;
 }
 
+.factura{
+  margin-left: 30px;
+}
 
 /**************** menu burger -------------------*/
 .btnmb
@@ -288,7 +311,9 @@ h1 {
   flex-direction: column;
   cursor: pointer;
 }
-
+.span {
+  margin-left: -5px;
+}
 .btn .bar1, .btn .bar2, .btn .bar3
 {
   height: 4px;
@@ -484,7 +509,7 @@ li.link:first-child {
 }
 /* Product section styling */
 #pedido img{
-  margin-left: 50px;
+  margin-left: 20px;
   width: 50px;
 }
 
@@ -804,29 +829,29 @@ a {
 
 .table>tbody>tr>td,
 .table>tfoot>tr>td {
-  vertical-align: inherit;
+  vertical-align: auto;
   padding-inline: 20px;
 }
 
 @media screen and (max-width: 800px) {
   table#cart tbody td .form-control {
-    width: 20%;
+    width: 30%;
     display: inline !important;
   }
 
   table#cart thead {
     display: none;
   }
-
+  
   table#cart tbody td {
-    display: block;
-    padding: .6rem;
-    min-width: 320px;
+    display: flex;
+    float: left;
+    flex-wrap: nowrap;
   }
 
   table#cart tbody tr td:first-child {
-    background: #333;
-    color: #fff;
+ width: 100%;
+    color: rgb(0, 0, 0);
   }
 
   table#cart tbody td:before {
@@ -850,6 +875,8 @@ a {
   }
 
 }
+
+
 /*
 #hero{
   display: flex;
@@ -909,6 +936,9 @@ footer .container{
 body
 {
     margin: 0;
+}
+.list-group {
+  width: 90%;
 }
 #containerSlider
 {
