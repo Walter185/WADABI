@@ -209,6 +209,8 @@ h1 {
   background-color: #0d6efd;
   border-color: #0d6efd;
   vertical-align: middle;
+  font-weight: 400;
+  line-height: 1.5;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -263,7 +265,7 @@ h1 {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-#btnContinuar , #btnClear{
+#btnClear{
   background-color: #0d6efd;
   border-color: #000000; 
   display: inline-block;
@@ -274,8 +276,7 @@ h1 {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  margin: 50px;
-  padding: 50px;
+  margin-inline: 50%;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -671,6 +672,7 @@ td {
 
   .link {
     padding: .7rem 1rem 1rem 7rem;
+    margin-left: 70px;
     cursor: pointer;
   }
 
