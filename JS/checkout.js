@@ -2,9 +2,9 @@ function crearFinDeLista(subTotal,tax){
 	finDeLista = `  <li class="list-group-item d-flex justify-content-between bg-light">
 						  <div class="text-success">
 							<h6 class="my-0">Impuesto</h6>
-							<small>IVA</small>
+							<small>21% IVA</small>
 						  </div>
-						  <span class="text-success">$${(subTotal*0.21).toFixed(2)}</span>
+						  <span>$${(subTotal*0.21).toFixed(2)}</span>
 						</li>
 						 <li class="list-group-item d-flex justify-content-between bg-light">
 						  <div class="text-success">
@@ -42,7 +42,7 @@ function crearFinDeLista(subTotal,tax){
 	}	
 	
 	function EventListenerEraseStorage(){
-		$('#boutonClear').click(function(){
+		$('#btnClear').click(function(){
 			if (typeof(Storage) !== 'undefined'){
 				localStorage.clear();
 			}
@@ -51,15 +51,8 @@ function crearFinDeLista(subTotal,tax){
 			}
 		})
 	}
-	function creerLaDate(){
-		/*var d = new Date();
-		var month = d.getMonth()+1;
-		var day = d.getDate();
-		var year = d.getFullYear();
-		var jour = ['dima']*/
+	function crearFecha(){
 		var d = new Date();
-				
-		//On récupère les informatoins relatives à notre date
 		var dy = d.getFullYear();
 		var dmo = d.getMonth();
 		var dday = d.getDay();
@@ -68,18 +61,17 @@ function crearFinDeLista(subTotal,tax){
 		var dmi = d.getMinutes();
 		var ds = d.getSeconds();
 		
-		/*On se rappelle que le premier élément d'un tableau
-		 *possède l'indice 0*/
-		var mois = ['enero', 'febrero', 'marzo', 'abril', 'mayo','junio', 'julio', 'agosto', 'septiembre','octubre', 'noviembre', 'diciembre'];
+
+		var mes = ['enero', 'febrero', 'marzo', 'abril', 'mayo','junio', 'julio', 'agosto', 'septiembre','octubre', 'noviembre', 'diciembre'];
 		
-		var jour = ['Domingo', 'Lunes', 'Martes', 'Miércoles','Jueves', 'Viernes', 'Sábado'];
+		var dia = ['Domingo', 'Lunes', 'Martes', 'Miércoles','Jueves', 'Viernes', 'Sábado'];
 	
-		 $('#maDate').text("Fecha: " +jour[dday]+ " , "+ddate+ " de " + mois[dmo] + " " +dy);
+		 $('#myDate').text("Fecha: " +dia[dday]+ " , "+ddate+ " de " + mes[dmo] + " " +dy);
 		 console.log(ddate)
 	}
 	
 	function functionCheckout(){
-		creerLaDate();
+		crearFecha();
 		if (localStorage.getItem('listaProducto') != null){
 			EventListenerEraseStorage();
 			tabla = JSON.parse(localStorage.getItem('listaProducto'));

@@ -30,6 +30,9 @@
         <a class='logo'>WADABI</a>
       </div>
       <ul id="links" class="links hide">
+        <li>   <input id="searchbar" onkeyup="buscar_producto()" type="text"
+          name="search" placeholder="Buscar producto..">
+        </li>
         <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
         <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
         </a>
@@ -43,7 +46,7 @@
 
 
   <!--**********************************************************************************************************/-->
-  <section class="container" id="propos">
+  <section class="container" id="card">
     <div id="blog" class="container">
       <div class="row welcome text-center">
         <div>
@@ -54,8 +57,7 @@
       <div class="row" id="myCatalogue">
       </div>
       <div class="row">
-        <a href="cart.html" id="boutonPanier" class=" text-center btn"
-          style="background-color: #007BFF;color: white;">Ir al Carrito</a>
+        <a href="cart.html" id="iralcarrito">Ir al Carrito</a>
       </div>
     </div>
   </section>
@@ -70,5 +72,5 @@
   </footer>
   <script src="JS/index.js"></script>
 </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 </html>
