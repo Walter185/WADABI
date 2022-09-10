@@ -300,10 +300,6 @@ h1 {
 #showdata {
   text-align: justify !important;
 }
-table {
-  text-align: center;
-  margin-left: 35px;
-}
 .menu {
   background-color: #476d6d;
 }
@@ -996,7 +992,9 @@ body
   margin-top: 14px;
   font-size: medium;
 }
-
+p {
+  margin-left: 20px;
+}
 
 .productos {
   display: list-item;
