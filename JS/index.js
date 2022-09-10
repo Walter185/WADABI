@@ -26,7 +26,7 @@ function mouseOutLinks(event) {
 }
 window.onload= function(){
 
-			
+			/*
 	class Producto{
 		constructor(name, basicPrice,id,description){
 			this.name = name;
@@ -52,27 +52,27 @@ window.onload= function(){
 		new Producto('zapas4',580.50,64,"Zapa4"),
 		new Producto('zapas5',390.50,65,"Zapa5"),
 		];
-	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
+	}else*/ var data = JSON.parse(localStorage.getItem('listaProducto'));
 
 	// FICHA DE PRODUCTO
-		for (var i = 0; i < tablaProducto.length; i++) {
-			tablaProducto[i].partialViewCatalogue = `<div id="tarjeta">
+		for (var i = 0; i < data.length; i++) {
+			data[i].partialViewCatalogue = `<div id="tarjeta">
 						<div class="productos">
-						  <img class="card-img-top" src="${tablaProducto[i].image}" alt="Card image cap" width="250px">
+						  <img class="card-img-top" src="${data[i].image}" alt="Card image cap" width="250px">
 						   <div class="overlay">
-   							 <div class="text">${tablaProducto[i].description}</div>
+   							 <div class="text">${data[i].description}</div>
  						   </div>
 						  <div class="card-body">
-							  <h5 class="card-title">${tablaProducto[i].name}</h5>
-							    <p class="mb-0">id#: ${tablaProducto[i].id}</p> 
-							    <p class="mt-0">Precio: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
+							  <h5 class="card-title">${data[i].name}</h5>
+							    <p class="mb-0">id#: ${data[i].id}</p> 
+							    <p class="mt-0">Precio: ${data[i].basicPrice.toFixed(2)}$</p>
 							  <span class="span">Cantidad:</span> 
 							  <input class="inputNumber" type="number" value="0" id="innum">
 							 <button id="premier" class="btn btn-primary">Carrito</button>
 						  </div>
 						</div>
 					</div>`
-					$('#myCatalogue').append(tablaProducto[i].partialViewCatalogue);
+					$('#myCatalogue').append(data[i].partialViewCatalogue);
 		}
 
 	var quantite = 0;
@@ -92,13 +92,13 @@ window.onload= function(){
 	});
       
 	function updateQuantite(button){
-		for (var i = 0; i < tablaProducto.length; i++) {
-			if(tablaProducto[i].name ==  button.parent().children('.card-title').text()){
-				tablaProducto[i].qty += parseInt(quantite);
+		for (var i = 0; i < data.length; i++) {
+			if(data[i].name ==  button.parent().children('.card-title').text()){
+				data[i].qty += parseInt(quantite);
 
-				console.log('El monto total es: ' + tablaProducto[i].qty * tablaProducto[i].basicPrice);
-				console.log('El valor por producto es: ' + tablaProducto[i].basicPrice);
-				console.log('La cantidad total de productos son: ' + tablaProducto[i].qty);
+				console.log('El monto total es: ' + data[i].qty * data[i].basicPrice);
+				console.log('El valor por producto es: ' + data[i].basicPrice);
+				console.log('La cantidad total de productos son: ' + data[i].qty);
 			}
 		}
 			quantite = 0;
@@ -130,7 +130,7 @@ window.onload= function(){
 	function copiaListaProducto(listaProducto){
 		if (typeof(Storage) !== 'undefined'){
 			localStorage.clear();
-			localStorage.setItem('listaProducto',JSON.stringify(tablaProducto));
+			localStorage.setItem('listaProducto',JSON.stringify(data));
 			
 		}
 		else {

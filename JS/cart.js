@@ -1,31 +1,31 @@
 function crearDescriptionProduct(){
-	tabla = JSON.parse(localStorage.getItem('listaProducto'));
+	data = JSON.parse(localStorage.getItem('listaProducto'));
 	total = 0;
 	$('#myCart').empty();
-	for (var i = tabla.length - 1; i >= 0; i--) {
-		tabla[i].partialViewDescription = `<tr id="pedido">
+	for (var i = data.length - 1; i >= 0; i--) {
+		data[i].partialViewDescription = `<tr id="pedido">
 							<td class="premier" data-th="Producto">
 								<div class="row">
 									<div>
-										<img src="${tabla[i].image}" alt="..." />
+										<img src="${data[i].image}" alt="..." />
 									</div>
 									<div class="nombre">
-										<h4 class="desc">${tabla[i].name}</h4>
-										<p>${tabla[i].description}</p>
+										<h4 class="desc">${data[i].name}</h4>
+										<p>${data[i].description}</p>
 									</div>
 								</div>
 							</td>
-							<td data-th="Precio">${tabla[i].basicPrice.toFixed(2)}$</td>
+							<td data-th="Precio">${data[i].basicPrice.toFixed(2)}$</td>
 							<td data-th="Cantidad">
-								<p >${tabla[i].qty}</p>
+								<p >${data[i].qty}</p>
 							</td>
-							<td data-th="Subtotal" class="text-center">${(tabla[i].qty * tabla[i].basicPrice).toFixed(2)}</td>
+							<td data-th="Subtotal" class="text-center">${(data[i].qty * data[i].basicPrice).toFixed(2)}</td>
 							<td><button class="precuenta" id="quitar">Quitar</button></td>
 						</tr>`
-		if (tabla[i].qty > 0) {
+		if (data[i].qty > 0) {
 			//console.log('El nombre: ' + tabla[i].name + '\nla cantidad: ' + tabla[i].qty + '\nel precio de base: ' + tabla[i].basicPrice + '\nel precio: ' + tabla[i].qty * tabla[i].basicPrice);
-			$('#myCart').append(tabla[i].partialViewDescription);
-			total += tabla[i].qty * tabla[i].basicPrice.toFixed(2);
+			$('#myCart').append(data[i].partialViewDescription);
+			total += data[i].qty * data[i].basicPrice.toFixed(2);
 		}
 	}
 	$('#myTotal').text('Total: '+ total.toFixed(2) + '$');
@@ -48,9 +48,9 @@ function EventListeners(){
 }
 
 function deleteProduct(name){
-	for (var i = tabla.length - 1; i >= 0; i--) {
-			if(tabla[i].name == name){
-				tabla[i].qty = 0;
+	for (var i = data.length - 1; i >= 0; i--) {
+			if(data[i].name == name){
+				data[i].qty = 0;
 				saveStorage();
 				crearDescriptionProduct();
 				break;
@@ -61,7 +61,7 @@ function deleteProduct(name){
 function saveStorage(){
 	if (typeof(Storage) !== 'undefined'){
 		localStorage.clear();
-		localStorage.setItem('listaProducto',JSON.stringify(tabla));
+		localStorage.setItem('listaProducto',JSON.stringify(data));
 	}
 	else {
 		console.log('Lamentablemente su navegador no es compatible con la pagina...');
@@ -70,7 +70,7 @@ function saveStorage(){
 
 function functioncart(){
 	if (localStorage.getItem('listaProducto') != null){
-		var tabla = JSON.parse(localStorage.getItem('listaProducto'));
+		var data = JSON.parse(localStorage.getItem('listaProducto'));
 		crearDescriptionProduct();
 		console.log('hey')
 	}else {
