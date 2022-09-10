@@ -57,7 +57,7 @@ window.onload= function(){
 	// FICHA DE PRODUCTO
 		for (var i = 0; i < tablaProducto.length; i++) {
 			tablaProducto[i].partialViewCatalogue = `<div id="tarjeta">
-						<div>
+						<div class="productos">
 						  <img class="card-img-top" src="${tablaProducto[i].image}" alt="Card image cap" width="250px">
 						   <div class="overlay">
    							 <div class="text">${tablaProducto[i].description}</div>
@@ -211,3 +211,20 @@ function mouseInHero() {
     }
 }
 
+
+// JavaScript code buscador de producto
+function buscar_producto() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('productos');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+/*-------------fin del buscador----------------*/

@@ -957,6 +957,21 @@ body
     text-align: center;
     align-content: center;
 }
+/*-----buscador--------*/
+#searchbar{
+  margin-right: auto;
+  margin-top: 14px;
+  font-size: medium;
+}
+
+
+.productos {
+  display: list-item;
+ list-style: none;
+  
+}
+/*---------fin buscador----------*/
+
 @media(max-width: 732px)
 {
     #containerSlider img
