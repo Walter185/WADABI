@@ -177,7 +177,7 @@ header {
   width: 80px;
 }
 h1 {
-  margin: 20px
+  margin-left: 30px;
 }
 
 .btn-primary {
@@ -878,8 +878,8 @@ a {
 
 }
 
-
 /*
+
 #hero{
   display: flex;
   align-items: center;
@@ -897,8 +897,8 @@ a {
   background-size: cover;
   background-position: center center;
 
+}----*/
 }
-
 h2{
   margin: 16px;
   font-size: 32px;
@@ -915,7 +915,7 @@ h2{
   font-weight: bold;
 }
 
-
+/*
 
   font-size:large;
 }
