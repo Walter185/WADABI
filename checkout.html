@@ -40,23 +40,27 @@
       </ul>
     </nav>
   </header>
-
-  <div>
-    <div class="row">
-      <div>
-        <hr>
-        <h1 class="text-center text-muted">Detalle de su Orden</h1>
-        <hr class="mb-5">
-        <ul class="list-group mb-3" id="myList">
-        </ul>
-      </div>
-
-      <div class="row">
-        <a href="ticket.html" id="btnConfirmar">Confirmar</a>
-      </div>
-    </div>
-  </div>
-
+  <menu>
+    <h2>Datos para la Facturación</h2>
+    <form action="show_data.html" target="_blank" id="showdata">
+      <label for="firstname">Nombre:</label><input type="text" name="Nombre"
+        placeholder="Ingrese su nombre aqui.."><br><br>
+      <label for="lastname">Apellido:</label><input type="text" name="Apellido"
+        placeholder="Ingrese su apellido aqui.."><br><br>
+      <label for="address">Dirección:</label><input type="text" name="Domicilio"
+        placeholder="Ingrese su dirección aqui.."><br><br>
+        <label for="email">Correo e-mail:</label><input type="email" name="Email"
+        placeholder="Ingrese su email aqui.."><br><br>
+        <label for="phone">Teléfono:</label><input type="tel" name="Telefono"
+        placeholder="Ingrese su telefono aqui.."><br><br>
+        <p>Forma de pago:
+          <input type="radio" name="forma_de_pago" value="transferencia">Transferencia Bancaria
+          <input type="radio" name="forma_de_pago" value="Paypal">Paypal
+          <input type="radio" name="forma_de_pago" value="efectivo">Efectivo en una de nuestras sucursales
+        </p>
+      <input type="submit" value="Enviar">
+    </form>
+  </menu>
 
   <footer>
     <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -69,4 +73,5 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
 </html>

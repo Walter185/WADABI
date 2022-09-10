@@ -293,7 +293,19 @@ h1 {
 }
 
 .factura{
-  margin-left: 30px;
+  margin-left: 35px;
+  text-align: start;
+
+}
+#showdata {
+  text-align: justify !important;
+}
+table {
+  text-align: center;
+  margin-left: 35px;
+}
+.menu {
+  background-color: #476d6d;
 }
 
 /**************** menu burger -------------------*/
