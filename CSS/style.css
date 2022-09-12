@@ -563,24 +563,6 @@ td {
   margin-bottom: 30px;
 }
 
-
-
-.preNav {
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30vh;
-  border-top: 1px solid #666674;
-  background-image: url('../IMAGENES/walter.jpg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  letter-spacing: .3em;
-}
-
-
 .navBar {
   background:#000;
   display: flex;
@@ -683,9 +665,7 @@ td {
 
   .links.hide {
     display: none;
-  }
-
- 
+  } 
 
   .burger {
     display: block;
@@ -1009,21 +989,18 @@ body{
   margin-top: 14px;
   font-size: medium;
 }
-<<<<<<< HEAD
-=======
 #searchbar:hover {
   transition:ease-in-out;
   width: 250px;
 }
-p {
+
+#searchbar p{
   margin-left: 20px;
 }
->>>>>>> 6fd930ff8244893a5ef96ce5281b4336038b5b2a
 
 .productos {
   display: inline-table;
- list-style: none;
-  
+  list-style: none;
 }
 /*---------fin buscador----------*/
 
