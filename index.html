@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/wadabi.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/w.png">
   <link href="./css/style.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
   <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,9 +21,6 @@
 
 <body>
   <header>
-    <div class="preNav">
-      <h1 class="logoHolder">WADABI STORE</h1>
-    </div>
     
     <nav class="navBar">
       <div onclick="burgerClicked(this)" class="burger">
@@ -29,9 +29,8 @@
         <div></div>
       </div>
       <div class="logoContainer">
-        <a class='logo'>WADABI</a>
-      </div>
- 
+        <a class='logo'><img src="./IMAGENES/wadabi punto com blanco.png" height="30px" alt="logoWadabi"></a>
+      </div> 
       <ul id="links" class="links hide">
         <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
         <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>
@@ -77,13 +76,40 @@
   </div>
 
   <footer>
-    <div class="container">
-      <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-      <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-      <p>Derechos reservados &copy;2022</p>
-    </div>
+    <section>    
+        <div id="containerFooter">
+            
+            <div class="webFooter">
+                <h3> online store </h3>
+                <p> men clothing </p>
+                <p> women clothing </p>
+                <p> men accessories </p>
+                <p> women accessories </p>
+            </div>
+            <div class="webFooter">
+                <h3> helpful link </h3>
+                <p> home </p>
+                <p> about </p>
+                <p> contact </p>
+            </div>
+            <div class="webFooter">
+                <h3>partners </h3>
+                <p>zara </p>
+                <p>pantaloons </p>
+                <p>levis </p>
+                <p>ucb </p>
+                <p>+ many more </p>
+            </div>
+            <div class="webFooter">
+                <h3> address </h3>
+                <p> building 101 </p>
+                <p> central avenue </p>
+                <p> la - 902722 </p>
+                <p> united states </p>
+            </div>
+        </div>
+        <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
+    </section>
   </footer>
   <script src="JS/index.js"></script>
 </body>
