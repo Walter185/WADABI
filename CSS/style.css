@@ -620,8 +620,6 @@ td {
   display: none;
   position: absolute;
   cursor: pointer;
-  top: .4rem;
-  left: 2.7rem;
 }
 
 .burger div {
@@ -695,7 +693,7 @@ td {
 
   .link {
     padding: .7rem 1rem 1rem 7rem;
-    margin-left: 70px;
+    margin-left: 10px;
     cursor: pointer;
   }
 
@@ -779,8 +777,8 @@ td {
 
 @media (max-width:375px) {
   .burger {
-    top: .3rem;
-    left: 1.7rem;
+    top: 1rem;
+    left: 1rem;
   }
 
   .logo {
@@ -867,7 +865,9 @@ a {
   table#cart thead {
     display: none;
   }
-  
+  #searchbar{
+    display: none;
+  }
   table#cart tbody td {
     display: flex;
     float: left;
@@ -1005,13 +1005,23 @@ body{
 }
 /*-----buscador--------*/
 #searchbar{
-  margin-right: auto;
+  float: left;
   margin-top: 14px;
   font-size: medium;
 }
+<<<<<<< HEAD
+=======
+#searchbar:hover {
+  transition:ease-in-out;
+  width: 250px;
+}
+p {
+  margin-left: 20px;
+}
+>>>>>>> 6fd930ff8244893a5ef96ce5281b4336038b5b2a
 
 .productos {
-  display: list-item;
+  display: inline-table;
  list-style: none;
   
 }

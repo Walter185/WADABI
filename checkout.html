@@ -41,23 +41,23 @@
     </nav>
   </header>
   <menu>
-    <h2>Datos para la Facturación</h2>
-    <form action="show_data.html" target="_blank" id="showdata">
+    <h2>Datos para la Facturación:</h2>
+    <form action="show_data.html" target="_self" id="showdata">
       <label for="firstname">Nombre:</label><input type="text" name="Nombre"
         placeholder="Ingrese su nombre aqui.."><br><br>
       <label for="lastname">Apellido:</label><input type="text" name="Apellido"
         placeholder="Ingrese su apellido aqui.."><br><br>
       <label for="address">Dirección:</label><input type="text" name="Domicilio"
         placeholder="Ingrese su dirección aqui.."><br><br>
-        <label for="email">Correo e-mail:</label><input type="email" name="Email"
+      <label for="email">Correo e-mail:</label><input type="email" name="Email"
         placeholder="Ingrese su email aqui.."><br><br>
-        <label for="phone">Teléfono:</label><input type="tel" name="Telefono"
+      <label for="phone">Teléfono:</label><input type="tel" name="Telefono"
         placeholder="Ingrese su telefono aqui.."><br><br>
-        <p>Formas de pago:
-          <input type="radio" name="Modalidad" value="transferencia">Transferencia Bancaria
-          <input type="radio" name="Modalidad" value="Paypal">Paypal
-          <input type="radio" name="Modalidad" value="efectivo">Efectivo en una de nuestras sucursales
-        </p>
+      <p>Formas de pago:
+        <input type="radio" name="MedioDePago" value="transferencia"> Transferencia Bancaria
+        <input type="radio" name="MedioDePago" value="paypal"> Paypal
+        <input type="radio" name="MedioDePago" value="efectivo"> Efectivo / Personalmente
+      </p>
       <input type="submit" value="Enviar">
     </form>
   </menu>
@@ -70,6 +70,7 @@
     <p>Derechos reservados @2022</p>
   </footer>
   <script src="JS/checkout.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
