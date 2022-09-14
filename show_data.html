@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/w.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="./css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
+  <title>WADABI</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navBar">
+      <div onclick="burgerClicked(this)" class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="logoContainer">
+        <a class='logo'>WADABI</a>
+      </div>
+      <ul id="links" class="links hide">
+        <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
+        <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+        </a>
+        <li class="link"><a href="sucursales.html">Sucursales <i class="fa fa-university" aria-hidden="true"></i></li>
+        </a>
+        <li class="link"><a href="about.html">Sobre WADABI®</li></a>
+        <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <h1 class="text-center text-muted">GRACIAS POR SU COMPRA!</h1>
+        <hr>
+      </div>
+    </div>
+  
+
+    <div class="row">
+      <div class="factura">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted"> FACTURA ELECTRONICA</span>
+        </h4>
+      
+
+        <div class="text-muted" id="myDate">FECHA: </div><br>
+        <table>        
+        <script language="javascript">
+        var args = location.search.substr(1).split('&');
+        for (var i = 0; i < args.length; ++i) {
+          var parts = args[i].split('=');
+          if (parts != null) {
+            var field = parts[0];
+            var value = parts[1];
+            if (value == null) {
+              value = "null"
+            }
+            else {
+              value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+            }
+        
+            document.writeln('<tr><td align="center">' + field + '</td>');
+            document.writeln('<td align="center">' + value + '</td></tr>');
+          }
+        }
+        </script>
+        
+        <noscript>
+        <tr><td>
+        <p>You need to turn on Javascript in your browser.</p>
+        
+        <p>In Microsoft Internet Explorer 4 or greater:</p>
+        <ul>
+        <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+        <li>Click on the "Security" tab.</li>
+        <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+        and then click on "Settings...".)</li>
+        <li>Under "Active scripting" make sure "Enable" is selected.</li>
+        </ul>
+        
+        <p>In Netscape version 4 or greater:</p>
+        <ul>
+        <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+        <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+        <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+        <li>Click the <b>OK</b> button.</li>
+        </ul>
+        
+        </td></tr>
+        </noscript>
+    
+        </ul>
+      </table>
+     
+        <ul class="row" id="myList">
+      </div>
+    </div>
+    <p>En la brevedad nos comunicaremos con Usted.</p>
+    <div class="row">
+      <a href="index.html" id="btnClear" action="https://formspree.io/f/mgeqodzn"
+      method="POST">Finalizar</a>
+    </div>
+
+  </div>
+  <footer>
+    <section>    
+        <div id="containerFooter">
+            
+            <div class="webFooter">
+                <h3> online store </h3>
+                <p> men clothing </p>
+                <p> women clothing </p>
+                <p> men accessories </p>
+                <p> women accessories </p>
+            </div>
+            <div class="webFooter">
+                <h3> helpful link </h3>
+                <p> home </p>
+                <p> about </p>
+                <p> contact </p>
+            </div>
+            <div class="webFooter">
+                <h3>partners </h3>
+                <p>zara </p>
+                <p>pantaloons </p>
+                <p>levis </p>
+                <p>ucb </p>
+                <p>+ many more </p>
+            </div>
+            <div class="webFooter">
+                <h3> address </h3>
+                <p> building 101 </p>
+                <p> central avenue </p>
+                <p> la - 902722 </p>
+                <p> united states </p>
+            </div>
+        </div>
+        <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
+    </section>
+  </footer>
+  <script src="JS/checkout.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

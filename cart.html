@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/WAADABI7.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./IMAGENES/w.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-
   <link href="./css/style.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
@@ -18,9 +18,7 @@
 
 <body>
   <header>
-    <div class="preNav">
-      <h1 class="logoHolder">WADABI STORE</h1>
-    </div>
+    
     <nav class="navBar">
       <div onclick="burgerClicked(this)" class="burger">
         <div></div>
@@ -28,16 +26,15 @@
         <div></div>
       </div>
       <div class="logoContainer">
-        <a class='logo'>WADABI</a>
-      </div>
+        <a class='logo'><img src="./IMAGENES/wadabi punto com blanco.png" height="30px" alt="logoWadabi"></a>
+      </div> 
       <ul id="links" class="links hide">
         <li class="link"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></li></a>
-        <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-        </a>
-        <li class="link"><a href="sucursales.html">Sucursales <i class="fa fa-university" aria-hidden="true"></i></li>
-        </a>
+        <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>
+        <li class="link"><a href="sucursales.html">Sucursales <i class="fa fa-university" aria-hidden="true"></i></li></a>
         <li class="link"><a href="about.html">Sobre WADABI®</li></a>
-        <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>
+        <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>   
+
       </ul>
     </nav>
   </header>
@@ -69,14 +66,42 @@
   </section>
 
   <footer>
-    <a class="redsoc" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-    <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-    <a class="redsoc" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a class="redsoc" href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-    <p>Derechos reservados @2022</p>
+    <section>    
+        <div id="containerFooter">
+            
+            <div class="webFooter">
+                <h3> redes sociales </h3>
+                <p><i class="fa-brands fa-twitter"></i> twitter </p>
+                <p><i class="fa-brands fa-instagram"></i> instagram </p>
+                <p><i class="fa-brands fa-square-facebook"></i> facebook </p>
+                <p><i class="fa-solid fa-envelope"></i> e-mail </p>
+            </div>
+            <div class="webFooter">
+                <h3> Links de ayuda </h3>
+                <p> home </p>
+                <p> about </p>
+                <p> contact </p>
+            </div>
+            <div class="webFooter">
+                <h3>partners </h3>
+                <p>zara </p>
+                <p>pantaloons </p>
+                <p>levis </p>
+                <p>ucb </p>
+                <p>+ many more </p>
+            </div>
+            <div class="webFooter">
+                <h3> sucursales </h3>
+                <p> Almagro </p>
+                <p> Villa Soldati </p>
+                <p> Microcentro </p>
+            </div>
+        </div>
+        <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
+    </section>
   </footer>
-  <script src="JS/index.js"></script>
   <script src="JS/cart.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 

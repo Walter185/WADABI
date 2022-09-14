@@ -1,21 +1,21 @@
 function crearFinDeLista(subTotal,tax){
-	finDeLista = `  <li class="list-group-item d-flex justify-content-between bg-light">
+	finDeLista = `  <div class="list-group-item d-flex justify-content-between bg-light">
 						  <div class="text-success">
 							<h6 class="my-0">Impuesto</h6>
 							<small>21% IVA</small>
-						  </div>
+						  
 						  <span>$${(subTotal*0.21).toFixed(2)}</span>
-						</li>
-						 <li class="list-group-item d-flex justify-content-between bg-light">
+						
+						 <div class="list-group-item d-flex justify-content-between bg-light">
 						  <div class="text-success">
 							<h6 class="my-0">SubTotal</h6>
-						  </div>
+						  
 						  <span class="text-success">$${subTotal.toFixed(2)}</span>
-						</li>
-						<li class="list-group-item d-flex justify-content-between">
+						
+						<div class="list-group-item d-flex justify-content-between">
 						  <span>Total (AR$)</span>
 						  <strong>$${(subTotal + tax).toFixed(2)}</strong>
-						</li>`
+						  </div></div></div></div>`
 	}
 	
 	function crearFacturaProducto(){
@@ -24,13 +24,12 @@ function crearFinDeLista(subTotal,tax){
 		$('#myList').empty();
 		for (var i = tabla.length - 1; i >= 0; i--) {
 			if (tabla[i].qty > 0) {
-				tabla[i].partialViewBill = ` <li class="list-group-item d-flex justify-content-between lh-condensed">
-							  <div>
-								<h6 class="my-0">${tabla[i].name}</h6>
-								<small class="text-muted">${tabla[i].description}</small>
-							  </div>
-							  <span class="text-muted">$${(tabla[i].basicPrice * tabla[i].qty).toFixed(2)}</span>
-							</li>`
+				tabla[i].partialViewBill = ` <div class="list-group-item d-flex justify-content-between lh-condensed">
+						
+								<span class="my-0">Producto: ${tabla[i].name} - ${tabla[i].description}</span>
+					
+							  <span class="text-muted">Precio sin IVA: $${(tabla[i].basicPrice * tabla[i].qty).toFixed(2)}</span>
+							</div>`
 	
 			$('#myList').append(tabla[i].partialViewBill);
 			total += tabla[i].qty * tabla[i].basicPrice.toFixed(2);
@@ -80,3 +79,5 @@ function crearFinDeLista(subTotal,tax){
 	}
 	
 	window.onload = functionCheckout();
+
+	
