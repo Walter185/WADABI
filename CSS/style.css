@@ -901,20 +901,11 @@ a {
   background-position: center center;
 
 }----*/
-iframe{
-  max-width: 100%;
-}
 
 .sucursales{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-h2{
-  margin: 16px;
-  font-size: 32px;
-  font-weight: bold;
+  width: 100%;
+  max-width: 90vw;
+  margin: 1rem auto;
 }
 
 .barrios{
@@ -927,12 +918,16 @@ h2{
   font-weight: bold;
 }
 
-/* @media(max-width: 700px){
-  .sucursales{
-    width: 60%;
-    margin: 0 2vw;
-  }
-} */
+iframe{
+  max-width: 100%;
+}
+
+h2{
+  margin: 1em;
+  font-size: 32px;
+  font-weight: bold;
+}
+
 /*
 
   font-size:large;
