@@ -902,10 +902,12 @@ a {
 
 }----*/
 
-h2{
-  margin: 16px;
-  font-size: 32px;
-  font-weight: bold;
+/* ------Sucursales-------- */
+
+.sucursales{
+  width: 100%;
+  max-width: 90vw;
+  margin: 1rem auto;
 }
 
 .barrios{
@@ -915,6 +917,16 @@ h2{
 
 .barrios p{
   font-size: 24px;
+  font-weight: bold;
+}
+
+iframe{
+  max-width: 100%;
+}
+
+.sucursubtile{
+  margin: 1em;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -1138,6 +1150,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 /*---------fin footer----------*/
 
+/* --------About----------------- */
+
 .tituloSN{
   text-transform: uppercase;
   text-align: center;
@@ -1145,8 +1159,16 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   font-weight: bold;
 }
 
+.containerSN img{
+  width: 60%;
+  object-fit: cover;
+}
+
 .containerSN{
   display: flex;
   gap: 2rem;
   margin: 3rem;
 }
+
+
+
