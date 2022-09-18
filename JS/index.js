@@ -46,11 +46,14 @@ window.onload= function(){
 	 {
 		var tablaProducto =
 		[
-		new Producto('zapa1',150.50,61,"Zapa1"),
-		new Producto('zapas2',260.50,62,"Zapa2"),
-		new Producto('zapas3',170.50,63,"Zapa3"),
-		new Producto('zapas4',580.50,64,"Zapa4"),
-		new Producto('zapas5',390.50,65,"Zapa5"),
+		new Producto('zapa1',25000,61,"Zapatilla Nike Negra-Roja-Azul"),
+		new Producto('zapas2',23500,62,"Zapatilla Nike Blanca"),
+		new Producto('zapas3',24900,63,"Zapatilla Nike Runing Negra"),
+		new Producto('zapas4',21700,64,"Zapatilla Nike Tennis Blanca"),
+		new Producto('zapas5',20450,65,"Zapatilla Cuero Beige"),
+		new Producto('campera',35000,65,"Campera Nike Blanca y Azul"),
+		new Producto('remera1',2500,65,"Remera Negra"),
+		new Producto('remera2',32000,65,"Campera amarilla"),
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
 
@@ -63,7 +66,7 @@ window.onload= function(){
    							 <div class="text">${tablaProducto[i].description}</div>
  						   </div>
 						  <div class="card-body">
-							  <h5 class="card-title">${tablaProducto[i].name}</h5>
+							 
 							    <p class="mb-0">id#: ${tablaProducto[i].id}</p> 
 							    <p class="mt-0">Precio: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
 							  <span class="span">Cantidad:</span> 
