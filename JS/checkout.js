@@ -1,5 +1,6 @@
 function crearFinDeLista(subTotal,tax){
-	finDeLista = `  <div class="list-group-item d-flex justify-content-between bg-light">
+	finDeLista = `  
+	<div class="list-group-item d-flex justify-content-between bg-light">
 						  <div class="text-success">
 							<h6 class="my-0">Impuesto</h6>
 							<small>21% IVA</small>
@@ -24,13 +25,12 @@ function crearFinDeLista(subTotal,tax){
 		$('#myList').empty();
 		for (var i = tabla.length - 1; i >= 0; i--) {
 			if (tabla[i].qty > 0) {
-				tabla[i].partialViewBill = ` <div class="list-group-item d-flex justify-content-between lh-condensed">
-						
-								<span class="my-0">Producto: ${tabla[i].name} - ${tabla[i].description}</span>
-					
-							  <span class="text-muted">Precio sin IVA: $${(tabla[i].basicPrice * tabla[i].qty).toFixed(2)}</span>
-							</div>`
-	
+				tabla[i].partialViewBill = `
+				<div class="list-group-item d-flex justify-content-between bg-light">
+				<span class="my-0">Producto: ${tabla[i].name}</span>
+					<br>
+			  <span class="text-muted">Precio sin IVA: $${(tabla[i].basicPrice * tabla[i].qty).toFixed(2)}</span>
+			</div>`
 			$('#myList').append(tabla[i].partialViewBill);
 			total += tabla[i].qty * tabla[i].basicPrice.toFixed(2);
 			}

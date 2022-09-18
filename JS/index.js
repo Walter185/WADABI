@@ -46,14 +46,15 @@ window.onload= function(){
 	 {
 		var tablaProducto =
 		[
-		new Producto('zapa1',25000,61,"Zapatilla Nike Negra-Roja-Azul"),
-		new Producto('zapas2',23500,62,"Zapatilla Nike Blanca"),
-		new Producto('zapas3',24900,63,"Zapatilla Nike Runing Negra"),
-		new Producto('zapas4',21700,64,"Zapatilla Nike Tennis Blanca"),
-		new Producto('zapas5',20450,65,"Zapatilla Cuero Beige"),
-		new Producto('campera',35000,65,"Campera Nike Blanca y Azul"),
-		new Producto('remera1',2500,65,"Remera Negra"),
-		new Producto('remera2',32000,65,"Campera amarilla"),
+		new Producto('Zapatilla Nike Negra-Roja-Azul',25000,61,"Zapatilla Nike Negra-Roja-Azul"),
+		new Producto('Zapatilla Nike Blanca',23500,62,"Zapatilla Nike Blanca"),
+		new Producto('Zapatilla Nike Runing Negra',24900,63,"Zapatilla Nike Runing Negra"),
+		new Producto('Zapatilla Nike Tennis Blanca',21700,64,"Zapatilla Nike Tennis Blanca"),
+		new Producto('Zapatilla Cuero Beige',20450,65,"Zapatilla Cuero Beige"),
+		new Producto('Campera Nike Blanca y Azul',35000,65,"Campera Nike Blanca y Azul"),
+		new Producto('Remera Negra',2500,65,"Remera Negra"),
+		new Producto('Campera amarilla',32000,65,"Campera amarilla"),
+		new Producto('Short Marron',9000,65,"Short Marron"),
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
 
@@ -67,8 +68,9 @@ window.onload= function(){
  						   </div>
 						  <div class="card-body">
 							 
+						  <h5 class="card-title">${tablaProducto[i].name}</h5>
 							    <p class="mb-0">id#: ${tablaProducto[i].id}</p> 
-							    <p class="mt-0">Precio: ${tablaProducto[i].basicPrice.toFixed(2)}$</p>
+							    <p class="mt-0">Precio: $ ${tablaProducto[i].basicPrice.toFixed(2)}</p>
 							  <span class="span">Cantidad:</span> 
 							  <input class="inputNumber" type="number" value="0" id="innum">
 							 <button id="premier" class="btn btn-primary">Carrito</button>

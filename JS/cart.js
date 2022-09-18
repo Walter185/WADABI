@@ -23,7 +23,7 @@ function crearDescriptionProduct(){
 							<td><button class="precuenta" id="quitar">Quitar</button></td>
 						</tr>`
 		if (data[i].qty > 0) {
-			//console.log('El nombre: ' + tabla[i].name + '\nla cantidad: ' + tabla[i].qty + '\nel precio de base: ' + tabla[i].basicPrice + '\nel precio: ' + tabla[i].qty * tabla[i].basicPrice);
+			//console.log('El nombre: ' + data[i].name + '\nla cantidad: ' + data[i].qty + '\nel precio de base: ' + data[i].basicPrice + '\nel precio: ' + data[i].qty * data[i].basicPrice);
 			$('#myCart').append(data[i].partialViewDescription);
 			total += data[i].qty * data[i].basicPrice.toFixed(2);
 		}

@@ -225,12 +225,14 @@ h1 {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  margin-inline: 50%;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  padding: .375rem .75rem;
+  padding: 0.75rem .75rem;
+  margin: 20px;
   font-size: 1rem;
+  width: 20%;
+  margin-left: 35%;
   border-radius: .25rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
@@ -242,8 +244,10 @@ h1 {
 }
 
 .factura{
-  margin-left: 35px;
-  text-align: start;
+  margin-left: 15%;
+  margin-right: 20%;
+  border-style: dashed;
+  padding: 10px;
 
 }
 #showdata {
@@ -555,20 +559,15 @@ td {
 .burger div {
   border: 0rem;
   padding: .2rem;
-  background: black;
+  background: rgb(255, 255, 255);
   margin: .3rem;
   width: 2.5rem;
-}
-.burger div:hover {
-  background-color: #fd2d0d;
 }
 
 .grid-container {
   max-width: 2700px;
   margin: 0 auto;
 }
-
-
 
 .title1 {
   letter-spacing: .1em;
@@ -596,7 +595,7 @@ a {
 .table>tbody>tr>td,
 .table>tfoot>tr>td {
   vertical-align: auto;
-  padding-inline: 20px;
+  padding-inline: 30px;
 }
 
 
@@ -769,6 +768,9 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   margin: 3rem;
 }
 
+#despedida{
+  margin-left: 70px;
+}
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
 @media(max-width:320px) {
@@ -915,6 +917,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   .burger {
     display: block;
+    margin-top: 10px;
+    margin-left: 15px;
   }
 
   .link {
@@ -1016,8 +1020,9 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 @media screen and (max-width: 800px) {
   table#cart tbody td .form-control {
-    width: 30%;
-    display: inline !important;
+    width: 13rem;
+    display: inline-block;
+    padding: 10px;
   } 
 
   table#cart thead {
@@ -1033,16 +1038,16 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
   .burger {
     position: sticky;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
   }
 
   .logoContainer{
     display: b;
   }
   table#cart tbody td {
-    display: flex;
-    float: left;
     flex-wrap: nowrap;
+    display: grid;
+    margin-top: 20px;
   }
 
   table#cart tbody tr td:first-child {
@@ -1054,7 +1059,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     content: attr(data-th);
     font-weight: bold;
     display: inline-block;
-    width: 8rem;
+    width: 13rem;
+    padding: 10px;
   }
 
   section {
