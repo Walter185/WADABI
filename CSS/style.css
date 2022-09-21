@@ -257,130 +257,6 @@ h1 {
   background-color: #476d6d;
 }
 
-/**************** menu burger -------------------*/
-.btnmb
-{
-  top: 0;
-  right: 0;
-  height: 70px;
-  width: 70px;
-  padding: 16px;
-  background: #FFE01A;
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-.span {
-  margin-left: -5px;
-}
-.btn .bar1, .btn .bar2, .btn .bar3
-{
-  height: 4px;
-  width: 100%;
-  display: block;
-  background: #000;
-}
-
-/* ----------- close btn ------------- */
-.close-btn
-{
-  top: 0;
-  right: 0;
-  height: 70px;
-  width: 70px;
-  padding: 20px;
-  background: #FFE01A;
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.close-btn .bar1
-{
-  transform: rotate(-130deg);
-  height: 4px;
-  width: 90%;
-  display: block;
-  background: #000;
-  position: absolute;
-}
-
-.close-btn .bar2
-{
-  display: none;
-}
-
-.close-btn .bar3
-{
-  transform: rotateZ(130deg);
-  height: 4px;
-  width: 90%;
-  display: block;
-  background: #000;
-  position: absolute;
-}
-
-/* ------------- Hide menu ----------- */
-.menu
-{
-  display: none;
-}
-
-/* ------------------- Menu styling --------------- */
-.open-menu
-{
-  width: 100%;
-  height: 100vh;
-  background: #FFE01A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 5s all;
-}
-
-.open-menu ul
-{
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-
-.open-menu ul li
-{
-  list-style: none;
-  padding: 6px;
-}
-
-.open-menu ul li a
-{
-  text-decoration: none;
-  font-size: 5vw;
-  font-weight: 800;
-  color: #000;
-}
-
-.open-menu ul li a:hover
-{
-  border-bottom: 5px solid #000;
-  transition: 0.2s all;
-}
-
-/*************** fin menu burger--------------------*/
-
-.responsiveContainer {
-  display: flex;
-  flex-Direction: row;
-}
-
-
-
 .links {
   list-style: none;
   display: flex;
@@ -526,7 +402,6 @@ td {
 
 .navBar a{
   display: flex;
-  align-items: center;
   color:#fff;
 }
 
@@ -838,17 +713,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         padding: 15px 50px;
     }
 }
-@media(max-width: 850px)
-{
-    #containerFooter
-    {
-        font-size: 13px;
-    }
-    .webFooter
-    {
-        font-size: 10px;
-    }
-}
+
 @media(max-width: 750px)
 {
     #containerFooter
@@ -899,9 +764,6 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     display: none;
   }
 
-  .logoContainer {
-    display: block;
-  }
 
   .links {
     display: flex;
@@ -923,7 +785,6 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   .link {
     padding: .7rem 1rem 1rem 0.rem;
-    /* margin-left: 10px; */
     cursor: pointer;
   }
 
@@ -1002,8 +863,16 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     border-bottom-right-radius: var(--my-border-radius);
     border-bottom-left-radius: var(--my-border-radius);
   }
-}
 
+  #containerFooter
+  {
+      font-size: 13px;
+  }
+  .webFooter
+  {
+      font-size: 10px;
+  }
+}
 
 @media (max-width:375px) {
   .burger {
@@ -1018,7 +887,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   table#cart tbody td .form-control {
     width: 13rem;
     display: inline-block;
@@ -1118,10 +987,6 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     border-bottom-right-radius: var(--my-border-radius);
     border-top-right-radius: 0;
   }
-
-}
-
-@media(min-width:1800px) {
 
   .heros-section {
     grid-gap: .4rem;
