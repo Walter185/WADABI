@@ -41,7 +41,7 @@ window.onload= function(){
 			this.bill = '';
 		}
 	}
-	//  PRODUCTOS  
+	//  BASE DE DATOS DE PRODUCTOS  
 	if (localStorage.getItem('listaProducto') == null)
 	 {
 		var tablaProducto =
