@@ -39,24 +39,51 @@
   </header>
   <menu>
     <h2>Datos para la Facturación:</h2>
-    <form action="show_data.html" target="_self" id="showdata">
-      <label for="firstname">Nombre</label><input type="text" name="Nombre"
-        placeholder="Ingrese su nombre aqui.."><br><br>
-      <label for="lastname">Apellido:</label><input type="text" name="Apellido"
-        placeholder="Ingrese su apellido aqui.."><br><br>
-      <label for="address">Dirección:</label><input type="text" name="Domicilio"
-        placeholder="Ingrese su dirección aqui.."><br><br>
-      <label for="email">Correo e-mail:</label><input type="email" name="Email"
-        placeholder="Ingrese su email aqui.."><br><br>
-      <label for="phone">Teléfono:</label><input type="tel" name="Telefono"
-        placeholder="Ingrese su telefono aqui.."><br><br>
-      <p>Formas de pago:
-        <input type="radio" name="MedioDePago" value="transferencia"> Transferencia
-        <input type="radio" name="MedioDePago" value="paypal"> Paypal
-        <input type="radio" name="MedioDePago" value="efectivo"> Efectivo / Personalmente
-      </p>
-      <input type="submit" value="Enviar">
+    <br>
+    <form action="show_data.html" name="fvalida" target="_self" id="showdata">
+        <table>
+            <tr>
+                <td><label for="firstname">Nombre: </label><input type="text" name="Nombre" minlength="3"
+                  maxlength="20"  placeholder="Ingrese su nombre aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="lastname">Apellido: </label><input type="text" name="Apellido" minlength="3"
+                maxlength="20" placeholder="Ingrese su apellido aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="age">Edad: </label><input type="number" name="Edad" placeholder="Ingrese su edad aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="address">Direccion: </label><input type="text" name="Direccion" minlength="3"
+                maxlength="50" placeholder="Ingrese su direccion aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email: </label><input type="email" name="Email" size="20" maxlength="50"  placeholder="Ingrese su email aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="telefono">Telefono: </label><input type="text" name="Telefono" minlength="3"
+                maxlength="50"  placeholder="Ingrese su telefono aqui.."></td>
+            </tr>
+            <tr>
+                <td>Formas de pago:</td>
+                <td>
+                    <select name=interes minlength="1">
+                        <option value="Elegir">Elegir
+                        <option value="Transferencia">Transferencia Bancaria
+                        <option value="Paypal">Paypal/MercadoPago
+                        <option value="Efectivo">Abonar en efectivo
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Al presionar el botón, se llama a la función de validacion -->
+                    <input type="button" id="showdata" value="Enviar" onclick="validarEnviar()">
+                </td>
+            </tr>
+        </table>
     </form>
+
   </menu>
 
   <footer id="idfooter">
