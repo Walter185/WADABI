@@ -1,4 +1,11 @@
 /*------------------heros-------------------*/
+
+#blue {
+  background-color: #11fd0d;
+  text-align: center;
+  margin-top: 15px;
+  font-size: large;
+}
 .hero-container1 {
   grid-area: a1;
 }
