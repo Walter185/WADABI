@@ -236,3 +236,17 @@ var cad=`
     </section>
 `
 document.getElementById("idfooter").innerHTML=cad;
+
+
+
+var contenido = document.querySelector('#contenido')
+function traer() {
+    fetch('https://api.bluelytics.com.ar/v2/latest')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.blue)
+        contenido.innerHTML=`
+        <p id="blue">Dolar: ${data.blue.value_avg} Euro: ${data.blue_euro.value_avg}</p>
+        `
+    })
+}

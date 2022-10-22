@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
   <title>Home │ WADABI</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
 </head>
 
 <body>
@@ -30,17 +32,23 @@
         <a href="index.html"><img src="./IMAGENES/wadabi punto com blanco.png" height="30px" alt="logoWadabi"></a>
       </div> 
       <ul id="links" class="links hide">
+        <li class="link"><a onclick="traer()">Aceptamos moneda extrajera<i class="fa fa-dollar" aria-hidden="true"></i></li></a>
+            <div  class="mt-5" id="contenido"></div>
         <li class="link"><a href="index.html">Inicio <i class="fa fa-home" aria-hidden="true"></i></li></a>
         <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>
         <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>   
       </ul>
+  
     </nav>
   </header>
-  
+
+
+  </div>
   <div id="miniAnimation">
     <p>Nueva Colección Primavera 2022</p>
   </div>  
 
+<br>
   <div class="grid-container">
     <section id="heroSection" class="heros-section" >
         <div class="hero-container1 overlay-container"><img src="./IMAGENES/Zapatilla Nike NRA.jpg" class="img-hero img1"/><div class="my-overlay o1"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
