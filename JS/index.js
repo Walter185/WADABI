@@ -204,13 +204,13 @@ var cad=`
 <section>    
         <div id="containerFooter">
             
-            <div class="webFooter">
-                <h3> redes sociales </h3>
-                <p><i class="fa-brands fa-twitter"></i> twitter </p>
-                <p><i class="fa-brands fa-instagram"></i> instagram </p>
-                <p><i class="fa-brands fa-square-facebook"></i> facebook </p>
-                <p><i class="fa-solid fa-envelope"></i> e-mail </p>
-            </div>
+			<div class="webFooter">
+				<h3> redes sociales </h3>
+				<a href="https://twitter.com/?lang=es" target="_blank"><p><i class="fa-brands fa-twitter"></i> twitter </p></a>
+				<a href="https://www.instagram.com/" target="_blank"><p><i class="fa-brands fa-instagram"></i> instagram </p></a>
+				<a href="https://www.facebook.com/" target="_blank"><p><i class="fa-brands fa-square-facebook"></i> facebook </p></a>
+				<a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank"><p><i class="fa-solid fa-envelope"></i> e-mail </p></a>
+			</div>
             <div class="webFooter">
                 <h3> Links de ayuda </h3>
                 <p><a href="index.html">Inicio</a></p>
